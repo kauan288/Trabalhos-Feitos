@@ -1,0 +1,695 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    width: 100%; /* Garante que o corpo ocupe toda a largura da página */
+    margin: 0;
+    background-image: url('img/v748-toon-106.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+
+.logo {
+    width: 150px;
+}
+
+.container {
+    width: 100%; /* Garante que o container ocupe toda a largura da tela */
+    max-width: 100%; /* Impede que o container ultrapasse a largura da tela */
+    margin: 0;
+    padding: 0;
+}
+
+.caleido {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.caleido:hover {
+    color: #87d3ff;
+}
+
+.selo {
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px; 
+    padding: 10px; 
+    z-index: 1000; 
+    text-decoration: none; 
+    transition: transform 0.3s ease; /* Transição suave */
+}
+.selo:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do ícone no hover */
+
+}
+
+.flutuanteL {
+    position: fixed; 
+    bottom: 90px; 
+    right: 20px; 
+    padding: 10px; 
+    z-index: 1000; 
+    text-decoration: none; 
+    transition: transform 0.3s ease; /* Transição suave */
+}
+.flutuanteL:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do ícone no hover */
+
+}
+
+.flutuanteW {
+    position: fixed; 
+    bottom: 10px; 
+    right: 20px; 
+    padding: 10px; 
+    z-index: 1000; 
+    text-decoration: none; 
+    transition: transform 0.3s ease; /* Transição suave */
+}
+.flutuanteW:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do ícone no hover */
+
+}
+
+
+
+.video-clientes {
+    display: flex;
+    justify-content: center; /* Centraliza o vídeo */
+    margin: 20px 0; /* Espaço acima e abaixo do vídeo */
+}
+
+.container_grids{
+    padding: 0;
+}
+
+.banner .container{
+    padding: 0;
+}
+
+/* Top bar */
+.top-bar {
+    background-color: #D9D9D9;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between; /* Distribui os grupos de forma uniforme */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima para uma boa responsividade */
+    padding: 0 20px;
+}
+
+.social-icons,
+.contact-info,
+.extra-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre os elementos de cada grupo */
+}
+
+.contact-info i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilo adicional para os links */
+.extra-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-bar {
+    background-color: #D9D9D9;
+    width: 100%; /* Garante que a barra de cabeçalho ocupe 100% da largura */
+    padding: 5px 0;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Garante que o conteúdo do cabeçalho ocupe 100% da largura */
+    padding: 0 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    height: 250px; /* Defina uma altura fixa para o carrossel */
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.carousel-controls {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Distribui os botões nas extremidades */
+    transform: translateY(-50%); /* Ajusta a posição para o centro */
+    padding: 20px;
+}
+
+.carousel-controls button {
+    background-color: #3E4FFD;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    /* Adicione padding vertical para aumentar a área clicável */
+    height: 80px; /* Defina uma altura fixa para os botões */
+    width: 80px; /* Defina uma largura fixa para os botões */
+    display: flex; /* Adiciona flex para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-left: -150px;
+    margin-right: -150px ;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden; /* Esconde as imagens que não estão ativas */
+    height: 230px; /* Ajuste a altura conforme necessário */
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Começa com opacidade 0 */
+    transition: opacity 0.5s ease-in; /* Transição suave na opacidade */
+    position: absolute; /* Faz com que as imagens se sobreponham */
+    top: 0;
+    left: 0;
+}
+
+.banner-img.active {
+    opacity: 1; /* A imagem ativa começa visível */
+}
+
+.banner-text {
+    margin-top: 20px;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* Espaça a imagem e o texto */
+    width: 100%; /* Garante que a seção ocupe toda a largura */
+    margin: 0; /* Garante que não há margem extra ao redor */
+}
+
+.sobre-img {
+    width: 40%; /* Garante que a imagem ocupe 50% da largura */
+    padding: 0; /* Remove qualquer padding da imagem */
+    margin: 0; /* Remove qualquer margem extra da imagem */
+}
+
+.sobre-img img {
+    width: 100%; /* A imagem ocupa 100% do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.sobre-container {
+    padding: 0;
+}
+
+.sobre-texto {
+    width: 50%; /* O texto ocupa 50% da largura */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding-left: 10px; /* Espaço entre a imagem e o texto */
+    padding-right: 10%;
+    margin-left: 0; /* Garante que o texto não se mova para a direita */
+    padding-top: 60px;
+}
+
+.sobre-texto h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.sobre-texto p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    padding-bottom: 15px;
+}
+
+/* Garantir que as imagens dos produtos ocupem toda a largura quando necessário */
+.produtos-grid {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%; /* Garantir que a grid ocupe toda a largura */
+    padding: 0;
+}
+
+
+/* Barra azul única atrás dos títulos */
+.barra-azul {
+    background-color: #3E4FFD; /* Cor da barra azul */
+    width: 100%; /* Garante que a barra ocupe toda a largura da página */
+    text-align: center; /* Centraliza os títulos dentro da barra */
+    box-sizing: border-box; /* Garante que o padding não afete o layout */
+}
+
+.barra-azul .produto {
+    display: inline-block; /* Exibe os títulos lado a lado */
+    margin: 0 20px; /* Espaço entre os títulos */
+}
+
+.barra-azul h3 {
+    color: white; /* Cor do título */
+    font-size: 16px; /* Tamanho do título */
+    font-weight: lighter; /* Títulos mais leves */
+}
+
+
+.produto {
+    padding-bottom: 20px;
+    width: 13.8%; /* Ajuste a largura de cada produto */
+    text-align: center; /* Centraliza o conteúdo dentro de cada produto */
+    padding-left: 30px;
+}
+
+.produto h3 {
+    padding-top: 60px;
+    padding-bottom: 3px;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.produto img {
+    width: 100%; /* Garante que as imagens ocupem toda a largura do container */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
+/* Seção de Manutenção */
+.manutencao {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.manutencao-content {
+    display: flex;
+    justify-content: space-between; /* Isso vai garantir que a imagem e o texto fiquem lado a lado */
+    align-items: center;
+    width: 100%;
+}
+
+.manutencao-img {
+    width: 40%; /* Ajuste a largura da imagem */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.manutencao-img img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 30%; /* Bordas arredondadas */
+    padding:10px ;
+}
+
+.manutencao-texto {
+    width: 55%; /* Ajuste o tamanho do bloco de texto */
+}
+
+.manutencao-texto h2 {
+    font-size: 28px; /* Tamanho do título */
+    margin-bottom: 20px;
+}
+
+.manutencao-texto p {
+    line-height: 1.6;
+    color: #333;
+    padding-bottom: 15px;
+}
+
+
+.parceria, .clientes, .testemunhos {
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+}
+
+
+.parceria img, .clientes img, .testemunhos img {
+    width: 11%; /* Garante que todas as imagens nessas seções ocupem toda a largura */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
+/* Seção de Parceiros */
+.parceria {
+    text-align: center;
+    padding: 10px; /* Ajuste o padding para manter um bom espaçamento */
+    width: fit-content; /* Faz a largura se ajustar ao conteúdo (ícones) */
+    border: 3px solid rgb(255, 255, 255); /* Borda mais fina */
+    border-radius: 70px; /* Mais arredondada */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidade */
+    margin-bottom: 30px; /* Distância entre as seções */
+    display: flex; /* Flex para centralizar os ícones */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaço entre os ícones */
+    margin: auto; /* Garante que a borda seja centralizada */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.testemunhos .container h2 {
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.testemunhos {
+    margin: 0 auto; /* Garante que o container "testemunhos" fique centralizado na página */
+    max-width: 1200px; /* Define uma largura máxima para evitar que o conteúdo se espalhe demais */
+}
+
+.blue-background {
+    position: absolute; /*SÓ PRA DEIXAR AS LOGOS NO LUGAR KKKKKKKKKKKKKK */
+}
+
+
+.testemunhos-grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
+    gap: 20px;
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    width: 100%; /* Garante que a grid ocupe toda a largura disponível */
+}
+
+.testemunho {
+    width: 100%;
+    max-width: 300px; /* Certifique-se de que o contêiner também permite o aumento */
+    padding: 5px;
+}
+
+.testemunho img {
+    width: 100%; 
+    max-width: 300px; /* Defina um novo tamanho máximo */
+    height: auto; 
+    display: block; 
+    padding: 5px;
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.testemunho img:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
+}
+
+.borda {
+    width: 20%; /* Ajusta o comprimento da borda */
+    border-top: 3px solid #3E4FFD;
+    margin: 3px; /* Centraliza a borda */
+    padding: 10px;
+}
+
+.borda2 {
+    width: 20%; /* Ajusta o comprimento da borda */
+    border-top: 3px solid #3E4FFD;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: flex; /* Torna a borda um contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo do contêiner */
+    margin-bottom: 20px; /* Espaçamento abaixo da borda */
+}
+
+/* Opcional: para garantir que a borda tenha uma altura visível */
+.borda2::after {
+    content: '';
+    display: block;
+    height: 0; /* Não adiciona altura extra */
+}
+
+
+/* Ajustando os ícones dentro da parceria */
+.parceria img {
+    width: 160px; /* Ajuste o tamanho dos ícones */
+    height: auto;
+    object-fit: contain; /* Garante que os ícones mantenham suas proporções */
+}
+
+/* Estilos do footer */
+footer {
+  background-color: #394EFF; /* Cor de fundo similar à imagem */
+  color: white;
+  padding: 100px 100px 10px 100px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 250px; /* Ajuste conforme o tamanho da sua logo */
+  padding-left: 30px;
+}
+
+.footer-info {
+  max-width: 400px;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.footer-info i {
+  margin-right: 10px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+    margin-top: 20px; /* Espaço acima dos ícones sociais */
+}
+
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens nos extremos */
+    align-items: center;
+    padding: 10px 20px; /* Ajuste o padding para manter espaçamento das bordas */
+    border-top: 1px solid white;
+    font-weight: 400;
+    font-size: 24px;
+  }
+  
+  .footer-bottom p {
+    margin: 30px;
+  }
+
+  .negrito {
+    font-weight: bold; /* ou você pode usar um valor numérico, como 700 */
+}
+
+
+/* Estilo adicional para os ícones do footer */
+.footer-social a:hover {
+    color: #1f2db4; /* Cor dos ícones ao passar o mouse */
+}
+
+
+.button {
+    background-color: #3E4FFD; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 12px 25px; /* Tamanho do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 30px; /* Borda arredondada */
+    display: inline-block; /* Deixa o botão em linha com outros elementos */
+    text-align: center; /* Alinha o texto dentro do botão */
+    transition: all 0.3s ease; /* Adiciona transição suave ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra suave */
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #1f2db4; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte ao passar o mouse */
+    transform: translateY(-2px); /* Faz o botão "levitar" um pouco ao passar o mouse */
+}
+
+.button:active {
+    transform: translateY(1px); /* Efeito de pressionamento do botão */
+}
+
+.texto-retangulo {
+    background-color: #D9D9D9; /* Cor de fundo do retângulo */
+    border-radius: 30px; /* Cantos arredondados */
+    padding: 30px; /* Espaçamento interno */
+    display: flex; /* Flexbox para alinhar imagem e texto */
+    justify-content: space-evenly; /* Espaça imagem e texto */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.texto-container {
+    width: 50%; /* Ajusta a largura do texto */
+    text-align: left; /* Alinha texto à esquerda */
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.imagem-pequena {
+    width: 25%; /* Ajusta a largura da imagem pequena */
+}
+
+.imagem-pequena img {
+    width: 100%; /* A imagem ocupa toda a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+/* catalogo */
+.titleC {
+    background-color: rgb(180, 167, 48);
+    background-size: 300px;
+    border-radius: 500px;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    color: white; /* Exemplo: cor do texto */
+    padding: 10px; /* Exemplo: espaçamento interno */
+}
+
+h3{color: rgb(255, 255, 255)} 
+.catalog {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 16px; /* Espaçamento entre as imagens */
+    padding: 16px;
+    background-color: #e4e141; /* Fundo branco para a seção */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(61, 59, 59, 0);
+    max-width: 1200px; /* Limita a largura total da seção */
+    margin: 32px auto; /* Centraliza a seção na página */
+}
+
+.card-item {
+    flex: 0 1 calc(25% - 16px); /* Cada imagem ocupa 25% do espaço menos o gap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(180, 167, 48);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-item img {
+    max-width: 100%; /* Ajusta o tamanho da imagem ao container */
+    height: auto; /* Mantém a proporção */
+    display: block;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    
+    .barra-azul {
+        padding: 15px 0; /* Ajusta o espaçamento vertical na barra azul */
+    }
+
+    .produtos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 100%; /* Ajusta o tamanho dos produtos em telas menores */
+        margin-bottom: 15px;
+    }
+
+    .barra-azul h3 {
+        font-size: 100%; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    .top-bar .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .social-icons,
+    .contact-info,
+    .extra-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.infinite-sliding-carousel {
+    position: relative;
+    max-width: 100%; /* Ajuste para responsividade */
+    overflow: hidden;
+}
+
+.infinite-sliding-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.infinite-sliding-slide {
+    flex: 0 0 auto;
+    width: 100%; /* Garante que cada slide ocupe toda a largura */
+}
+
+.infinite-sliding-slide img {
+    width: 100%;
+    height: 50%;
+}
